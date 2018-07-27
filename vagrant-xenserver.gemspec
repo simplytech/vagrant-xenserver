@@ -9,13 +9,14 @@ Gem::Specification.new do |s|
   s.authors       = "Jon Ludlam"
   s.email         = "jonathan.ludlam@citrix.com"
   s.homepage      = "http://github.com/jonludlam/vagrant-xenserver"
-  s.summary       = "Enables Vagrant to manage XenServers."
+  s.summary       = "XenServer provider for Vagrant."
   s.description   = "Enables Vagrant to manage XenServers."
 
-  s.add_development_dependency "rake"
-  s.add_runtime_dependency "nokogiri", "~> 1.6.3"
-  s.add_runtime_dependency "json"
-  s.add_runtime_dependency "xenapi"
+  s.add_development_dependency "rake", '~> 0'
+
+  s.add_runtime_dependency 'nokogiri', '~> 1.6', '>= 1.6.3'
+  s.add_runtime_dependency 'json', '~> 0'
+  s.add_runtime_dependency 'xenapi', '~> 0'
 
   s.files         = `git ls-files`.split($\)
   s.executables   = [] # gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
